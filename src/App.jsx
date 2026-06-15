@@ -22,20 +22,20 @@
 
 
 
-import {useState} from 'react'   //imported usestate to use usestate function  
-function App(){
-const[count,setCount]=useState(0)   // usestate start at 0 and count and setcount are its var holdin 1 and updated value
+// import {useState} from 'react'   //imported usestate to use usestate function  
+// function App(){
+// const[count,setCount]=useState(0)   // usestate start at 0 and count and setcount are its var holdin 1 and updated value
 
-return(
-  <div>
-      <h1> Count:{count} </h1>
-          <button onClick={() => setCount(count+1)}>Add</button> {/**we used arrow function cuz this should run onlly when clciked in add */}
-              <button onClick={() => setCount(count-1)}>Minus</button>
-                </div>
-                )
-                }
+// return(
+//   <div>
+//       <h1> Count:{count} </h1>
+//           <button onClick={() => setCount(count+1)}>Add</button> {/**we used arrow function cuz this should run onlly when clciked in add */}
+//               <button onClick={() => setCount(count-1)}>Minus</button>
+//                 </div>
+//                 )
+//                 }
 
- export default App
+//  export default App
 
 
 // Day3 :properties(props)
