@@ -1,24 +1,89 @@
-// //Day 4 honework
-// import { useState } from "react"; 
+// Day 5: conditional Rendering
+import { useState } from 'react'
+function App(){
+const[isloggedIn, setloggedIn]=useState(false) //the start valiue is false
 
-// function card(props){
-//   return
-//   <p>
-//   {props.name} {props.hobby}</p>
+return(
+    <div>
+    {isloggedIn? (<h1>Welcome</h1> ) : ( <h1>Please login</h1>)}
+    <button onClick={() => setloggedIn(!isloggedIn)}>
+        {isloggedIn ? 'logout':'Login'}
+        </button>
+    </div>
+
+    )
+}
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // a card function with a clcik button of love
+// import { useState } from 'react'
+// function Card(props){
+//     return (
+//         <div>
+//             <h1>{props.name}</h1>
+//             <p>{props.hobby}</p>
+//         </div>
+//     )
+    
 // }
-
 // function App(){
-//   const[count,setCount]=usecase(0)
-//   return(
-//     <div>
-//       <card name="Rakshya" />
-//       <card hobby="Reading" />
-//       <button onClick={() => setCount(count+1)}>Love</button>
-//     </div>
-
-//   )
+//     const[like,setLike]=useState(0)
+//     return(
+//             <div>
+//             <Card name="Rakshya" hobby="dance" />
+//             <h1>Like: {like}</h1>
+//             <button onClick={() => setLike(like +1)}>Love</button>
+//             </div>
+//     )
 // }
 // export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
