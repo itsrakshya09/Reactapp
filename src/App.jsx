@@ -1,47 +1,118 @@
-// Day 9 :  homework
+// Day 11: React router multiple pages
+// installed react-router-dom to create multiple pages
+import {BrowserRouter,Route,Routes,Link}from 'react-router-dom'
 
+function Home(){
+    return <h1>Home page</h1>
+}
+    
 
+function About(){
+    return <h1>About page</h1>
 
+}
+function Contact(){
+    return <h1>Contact page</h1>
+}
 
-
-
-
-
-
-
-
-
-
-
-
-// DAy 9:useEffect Hook
-import { useState, useEffect } from 'react'
- 
 function App(){
-  const[count, setCount]=useState(0)
-  const[message, setMessage]=useState('')
-
-  useEffect(()=> {
-    if(count===0){
-      setMessage('Please click the button')
-    }
-    else if(count>=53){
-      setMessage('Its alot')
-    }
-    else{
-      setMessage(`you have clicked for like ${count} times`)
-    }
-  }, [count])
-
-  return(
-    <div>
-      <h1>{message}</h1>
-      <button onClick={()=> setCount(count+1)}>Click here</button>
-    </div>
-  )
+    return(
+        <BrowserRouter>
+        <nav>
+            <Link to="/">Home</Link>
+            <br></br>
+            <Link to="/contact">Contact</Link>
+            <br></br>
+            <Link to="/about">About</Link>
+            <br></br>
+            
+        </nav>
+        <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path='/about' element ={<About/>}/>
+        </Routes>
+        </BrowserRouter>
+    )
 
 }
 export default App
+
+
+
+
+
+
+
+
+
+
+// Day 10: fetching data from an Api
+
+// import {useState, useEffect } from 'react'
+// function App() {
+//   const [users, setUsers] = useState([])
+//   const [loading, setLoading] = useState(true)
+
+//   useEffect(( ) => {
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//       .then((response) => response.json())
+//       .then((data) => {
+//         setUsers(data)
+//         setLoading(false)
+//       })
+//   },[])
+
+//   if (loading) {
+//     return <h1>Loading...</h1>
+//   }
+
+//   return (
+//     <div>
+//       <h1>Users List</h1>
+//       {users.map((user) => (
+//         <div key={user.id}>
+//           <h2>{user.name}</h2>
+//           <p>Email: {user.email}</p>
+//           <p>City: {user.address.city}</p>
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// // DAy 9:useEffect Hook
+// import { useState, useEffect } from 'react'
+ 
+// function App(){
+//   const[count, setCount]=useState(0)
+//   const[message, setMessage]=useState('')
+
+//   useEffect(()=> {
+//     if(count===0){
+//       setMessage('Please click the button')
+//     }
+//     else if(count>=53){
+//       setMessage('Its alot')
+//     }
+//     else{
+//       setMessage(`you have clicked for like ${count} times`)
+//     }
+//   }, [count])
+
+//   return(
+//     <div>
+//       <h1>{message}</h1>
+//       <button onClick={()=> setCount(count+1)}>Click here</button>
+//     </div>
+//   )
+
+// }
+// export default App
 
 // Day 8:form and input
 // import { useState } from 'react'
