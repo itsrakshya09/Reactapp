@@ -1,5 +1,5 @@
 // Day 11: React router multiple pages
-// installed react-router-dom to create multiple pages
+// installed react-router-dom to create multiple page
 import {BrowserRouter,Route,Routes,Link}from 'react-router-dom'
 
 function Home(){
